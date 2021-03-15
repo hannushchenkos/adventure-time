@@ -4,6 +4,50 @@
     box-sizing: border-box;
 }
 
-div{
-    color: brown;
+#grid{
+    height: 100ch;
+    display: grid;
+    grid-template-rows: 2fr 8fr 1fr;
+    grid-template-columns: 2fr 8fr;
+    grid-template-areas: 'header header'
+                         'sidebar main'
+                         'bottompanel bottompanel';
+} 
+
+
+.header{
+    grid-area: header;
+    background: darkgreen;
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    height: 100%;
+    width: 20%;
+    background-color: lightgreen;
+    font-size: 30px;
+    color: honeydew;
+    align-items: center;
+}
+
+.name{
+    font-size: 30px;
+    color: honeydew;
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background: green;
+}
+
+.main{
+    grid-area: main;
+    background: lightgreen;    
+}
+
+.bottompanel{
+    grid-area: bottompanel;
+    background: darkgreen;
+    text-align: center;
 }
